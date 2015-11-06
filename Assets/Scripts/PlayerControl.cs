@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class PlayerControl : MonoBehaviour {
+
     public float speed;
     public float maxPos = 6.0f;
-    
+
+    public uiManager manger;
+
 
     Vector2 position;
     Animator anim;
@@ -13,7 +18,10 @@ public class PlayerControl : MonoBehaviour {
 
         position = transform.position; //assigning the car current position to position var
         anim = GetComponent<Animator>();
+
+       
 	}
+   
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,6 +41,8 @@ public class PlayerControl : MonoBehaviour {
         if(col.gameObject.tag =="Ghost Skull")
         {
             Destroy(gameObject); // destroy our man
+            manger.GameOver();
+           
         }
        
     }
