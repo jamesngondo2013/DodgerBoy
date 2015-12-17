@@ -19,7 +19,7 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void UpdateScore () {
 
-        //scoreText.text = "Score:\n" + score;
+        scoreText.text = "" + score;
 	}
 
     void OnCollisionEnter2D()

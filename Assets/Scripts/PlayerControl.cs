@@ -42,6 +42,7 @@ public class PlayerControl : MonoBehaviour {
         {
             Destroy(gameObject); // destroy our man
             manger.GameOver();
+            manger.gameOverActivated();
            
         }
        

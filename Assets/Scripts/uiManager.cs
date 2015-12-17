@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class uiManager : MonoBehaviour {
 
     public Text scoreText;
+    public Button[] buttons;
+
     int score;
     bool gameOver;
 
@@ -21,7 +23,7 @@ public class uiManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        scoreText.text = "Score:\n" + score;
+        scoreText.text = "" + score;
       
 	}
     void scoreUpdate()
@@ -31,6 +33,20 @@ public class uiManager : MonoBehaviour {
             score += 1;
         }
       
+    }
+    public void gameOverActivated()
+    {
+        gameOver = true;
+
+        if (Time.timeScale == 1) // if game is running
+        {
+            Time.timeScale = 0; // pause game
+        }
+
+        foreach(Button button in buttons)
+        {
+            button.gameObject.SetActive(true);
+        }
     }
     public void GameOver()
     {
@@ -50,14 +66,26 @@ public class uiManager : MonoBehaviour {
     public void Play()
     {
         Application.LoadLevel("Main");
+        if (Time.timeScale == 0) // if game is paused
+        {
+            Time.timeScale = 1; //resume game
+        }
     }
     public void Replay()
     {
         Application.LoadLevel(Application.loadedLevel);
+        if (Time.timeScale == 0) // if game is paused
+        {
+            Time.timeScale = 1; //resume game
+        }
     }
     public void Menu()
     {
         Application.LoadLevel("MenuScene");
+    }
+    public void CheckScores()
+    {
+        Application.LoadLevel("ScoreScene");
     }
     public void Exit()
     {
