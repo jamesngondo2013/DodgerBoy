@@ -4,36 +4,31 @@ using UnityEngine.UI;
 
 public class uiManager : MonoBehaviour {
 
-    public Text scoreText;
     public Button[] buttons;
-
-    int score;
+  
     bool gameOver;
 
 	// Use this for initialization
 	void Start () {
 
         gameOver = false;
-        score = 0;
-        InvokeRepeating("scoreUpdate",1.5f, 1.0f);
-
-       
+      
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-        scoreText.text = "" + score;
       
 	}
     void scoreUpdate()
     {
         if(!gameOver)
         {
-            score += 1;
+           // score += 1;
+         
         }
       
     }
+  
     public void gameOverActivated()
     {
         gameOver = true;

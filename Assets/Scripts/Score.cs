@@ -22,10 +22,17 @@ public class Score : MonoBehaviour {
         scoreText.text = "" + score;
 	}
 
-    void OnCollisionEnter2D()
+    void OnCollisionEnter2D(Collision2D col)
     {
-        score += dollarValue;
-        UpdateScore();
+        if (col.gameObject.tag == "Ghost Skull")
+        {
+            UpdateScore();
+        }
+        else 
+        {
+            score += dollarValue;
+            UpdateScore();
+        }
     }
-     
+   
 }
