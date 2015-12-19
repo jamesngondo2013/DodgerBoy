@@ -48,9 +48,12 @@
      <Compile Include="Assets\Scripts\BagController.cs" />
      <Compile Include="Assets\Scripts\BagSpawner.cs" />
      <Compile Include="Assets\Scripts\DestroyOnContact.cs" />
+     <Compile Include="Assets\Scripts\DisplayHighScores.cs" />
+     <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\GhostSpawner.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\highScores.cs" />
      <Compile Include="Assets\Scripts\uiManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

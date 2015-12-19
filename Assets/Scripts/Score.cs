@@ -7,7 +7,9 @@ public class Score : MonoBehaviour {
     
     public Text scoreText;
     public int dollarValue;
-    private int score;
+    public static int score;
+    public static int totalScore;
+    private static string username = "Anonymous";
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,11 @@ public class Score : MonoBehaviour {
         score = 0;
         UpdateScore();
 	}
+    void Update()
+    {
+       // highScores.AddNewHighscore(username, score);
+    }
+	
 	
 	// Update is called once per frame
 	void UpdateScore () {
@@ -31,8 +38,16 @@ public class Score : MonoBehaviour {
         else 
         {
             score += dollarValue;
+            totalScore = score;
             UpdateScore();
+           // highScores.AddNewHighscore(username, totalScore);
+            print(username + "" + totalScore);
+            
         }
+    }
+    public int getScore()
+    {
+        return score;
     }
    
 }
