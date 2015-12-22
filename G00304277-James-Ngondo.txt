@@ -1,0 +1,23 @@
+
+JAMES NGONDO - G00304277 - MOBILE APP DEVELOPMENT
+=================================================
+
+This is a game that that helps refresh your brain. It is called DodgerBoy simply because you dodge the zombies in order to collect money bags. 
+Each bag you collect earns you atleast $5 which is equivalent to the games score. 
+You get hit by a zombie, you die and game is over. It has sound effects.
+
+This is a Windows 8.1 Store App.
+
+Windows Store App Name: 		DodgerBoy
+
+Microsoft Developer/ Publisher Name:	James Ngondo
+
+Windows Store Link:			App Certification in Progress
+
+My github links: 			https://github.com/jamesngondo2013/DodgerBoy.git
+					https://github.com/jamesngondo2013/DodgerBoy-Visual-Studio2013.git
+
+Online ScoreBoard Link:			http://dreamlo.com/lb/4MyOWbyZg0a8srM8OyV2HwrLX57zl5uUOpoWWgyFt6qw
+
+NOTE: The two github links include one source code with Unity development scripts and the other link with the C# XAML code in Ms VS 2013 
+====
